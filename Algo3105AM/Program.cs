@@ -36,6 +36,9 @@ namespace Algo3105AM
             }
             Console.WriteLine("Erreur de la saisie");
             return -1;
+
+            //2ème méthode avec linq à la place de foreach
+            //return menu.SingleOrDefault(x => x.Numero == choix) is null ? choix : -1;
             
 
             /*if (choix.GetType().Equals(test))
