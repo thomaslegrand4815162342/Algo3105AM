@@ -15,16 +15,16 @@ namespace Algo3105AM
             //Ecriture d'une liste et d'items
             List<MenuItem> list = new List<MenuItem>
             {
-                new MenuItem{Numero=1,Libelle="menu1"},
-                new MenuItem{Numero=3,Libelle="menu3"},
-                new MenuItem{Numero=7,Libelle="menu7"},
-                new MenuItem{Numero=15,Libelle="menu15"},
+                new MenuItem{Libelle="menu1"},
+                new MenuItem{Libelle="menu3"},
+                new MenuItem{Libelle="menu7"},
+                new MenuItem{Libelle="menu15"},
             };
 
             int resultat = GererMenu(list);
             Console.WriteLine(resultat);
             Console.ReadLine();
-        }
+         }
 
         //METHODES
 
@@ -48,7 +48,7 @@ namespace Algo3105AM
             /*Type test = typeof(int);*/
 
             //test du choix par rapport au menu
-            foreach (MenuItem item in menu)
+            /*foreach (MenuItem item in menu)
 
             {
                 if (choix == item.Numero)
@@ -56,7 +56,7 @@ namespace Algo3105AM
             }
 
             Console.WriteLine("Erreur de la saisie");
-            return -1;
+            return -1;*/
 
             //2ème méthode avec linq à la place de foreach
             //return menu.SingleOrDefault(x => x.Numero == choix) is null ? choix : -1;

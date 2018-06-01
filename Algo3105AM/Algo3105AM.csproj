@@ -42,8 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="classes\Class1.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="classes\MenuItem.cs" />
+    <Compile Include="classes\Menu.cs" />
+    <Compile Include="..\..\Algo0106\Program.cs">
+      <Link>Program.cs</Link>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
