@@ -12,4 +12,7 @@ namespace Algo3105AM.classes
         public string Libelle { get; set; }
 
     }
+    ///<summary>
+    ///Représente une ligne d'un menu
+    /// </summary>
 }
