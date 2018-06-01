@@ -40,6 +40,8 @@ namespace Algo3105AM.classes
         public int Choisir()
         {
             Console.WriteLine("Saisir un choix");
+
+            //1ère saisie
             int choix;
             choix = int.Parse(Console.ReadLine());
 
@@ -48,6 +50,34 @@ namespace Algo3105AM.classes
                 if (choix == item.Numero)
                     return choix;
             }
+
+            //extraction libellé première saisie
+            var requete = from MenuItem in menuItems
+                          where choix == MenuItem.Numero
+                          select MenuItem.Libelle;
+
+            Console.WriteLine("Voici les sous menus");
+            Console.WriteLine(  "faites votre saisie");
+
+            //2e saisie
+            int choix2;
+            choix2 = int.Parse(Console.ReadLine());
+
+            foreach (MenuItem item in menuItems)
+            {
+                if (choix2 == item.Numero)
+                    return choix2;
+            }
+
+            //extraction libellé 2e saisie
+            var requete2 = from MenuItem in menuItems
+                          where choix2 == MenuItem.Numero
+                          select MenuItem.Libelle;
+
+
+            //Affichage
+            { Console.WriteLine($"Vous avez choisi le dossier{0}=>{1}", requete, requete2); };
+
 
             Console.WriteLine("Erreur de la saisie");
             return -1;
